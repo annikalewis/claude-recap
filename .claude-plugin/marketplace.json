@@ -1,0 +1,24 @@
+{
+  "name": "annikalewis",
+  "owner": {
+    "name": "Annika Lewis"
+  },
+  "metadata": {
+    "description": "Claude Code skills by Annika Lewis"
+  },
+  "plugins": [
+    {
+      "name": "recap",
+      "source": "./plugin",
+      "description": "Synthesizes your Claude Code session history into readable daily and weekly recaps",
+      "version": "1.0.0",
+      "author": {
+        "name": "Annika Lewis"
+      },
+      "homepage": "https://github.com/annikalewis/claude-recap",
+      "repository": "https://github.com/annikalewis/claude-recap",
+      "license": "MIT",
+      "keywords": ["recap", "session-history", "productivity", "claude-code"]
+    }
+  ]
+}

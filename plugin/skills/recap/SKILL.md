@@ -1,3 +1,7 @@
+---
+description: Synthesize your Claude Code session history into a readable recap. Use for /recap, /recap today, /recap yesterday, /recap week, or /recap YYYY-MM-DD.
+---
+
 # /recap
 
 Shows what you worked on in Claude Code — synthesized from your actual session history.
@@ -9,7 +13,7 @@ Shows what you worked on in Claude Code — synthesized from your actual session
 /recap today        → today
 /recap yesterday    → yesterday
 /recap week         → past 7 days
-/recap 2026-03-05   → that specific date
+/recap 2026-03-05   → a specific date
 ```
 
 ---
@@ -28,24 +32,10 @@ Read the argument after `/recap`. Map it:
 ### Step 2: Run the indexer
 
 ```bash
-bun run ~/.claude/skills/recap/index.ts --period {period}
+bun run ${CLAUDE_PLUGIN_ROOT}/index.ts --period {period}
 ```
 
 This outputs a JSON array of session metadata. Each entry has:
-- `sessionId` — UUID
-- `filePath` — absolute path to the `.jsonl` file
-- `projectLabel` — which repo/project it was in
-- `date` — YYYY-MM-DD
-- `startTime` — ISO timestamp
-- `turnCount` — number of real exchanges
-- `fileSizeKb` — file size
-- `firstUserMessage` — what you typed to kick off the session
-
-If no sessions are found, say: "No Claude Code sessions found for {period}."
-
-### Step 3: Decide which sessions to read in full
-
-Look at the index. Each entry now has:
 - `sessionId` — UUID
 - `filePath` — absolute path to the `.jsonl` file
 - `projectLabel` — which repo/project it was in
@@ -56,6 +46,10 @@ Look at the index. Each entry now has:
 - `turnCount` — number of real exchanges within the range
 - `fileSizeKb` — file size
 - `firstUserMessage` — first real user message within the range
+
+If no sessions are found, say: "No Claude Code sessions found for {period}."
+
+### Step 3: Decide which sessions to read in full
 
 **Skip** sessions that are clearly throwaway:
 - `turnCount` under 4
