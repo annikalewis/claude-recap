@@ -4,15 +4,17 @@
     "name": "Annika Lewis"
   },
   "metadata": {
-    "description": "Claude Code skills by Annika Lewis"
+    "description": "Claude Code skills by Annika Lewis",
+    "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "claude-recap",
-      "source": "./plugin",
-      "description": "Synthesizes your Claude Code session history into readable daily and weekly recaps",
+      "name": "recap",
       "version": "1.0.0",
+      "description": "Synthesizes your Claude Code session history into readable daily and weekly recaps",
+      "source": "./",
       "strict": false,
+      "skills": ["./.claude/skills/recap"],
       "author": {
         "name": "Annika Lewis"
       },
