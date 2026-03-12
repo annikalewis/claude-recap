@@ -84,7 +84,7 @@ Add this marketplace to Claude Code:
 Then install the recap skill:
 
 ```
-/plugin install recap@annikalewis
+/plugin install claude-recap@annikalewis
 ```
 
 Then in any Claude Code session:
@@ -99,7 +99,7 @@ Then in any Claude Code session:
 
 ```
 /plugin marketplace update annikalewis
-/plugin install recap@annikalewis
+/plugin install claude-recap@annikalewis
 ```
 
 ---

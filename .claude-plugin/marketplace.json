@@ -8,10 +8,11 @@
   },
   "plugins": [
     {
-      "name": "recap",
+      "name": "claude-recap",
       "source": "./plugin",
       "description": "Synthesizes your Claude Code session history into readable daily and weekly recaps",
       "version": "1.0.0",
+      "strict": false,
       "author": {
         "name": "Annika Lewis"
       },
