@@ -64,6 +64,12 @@ This skill has two parts:
 ## Prerequisites
 
 - [Claude Code](https://claude.ai/code) — the CLI tool from Anthropic
+- [Bun](https://bun.sh) — a fast JavaScript runtime used by the indexer
+
+Install Bun if you don't have it:
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
 
 ---
 
