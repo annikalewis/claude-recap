@@ -1,4 +1,5 @@
 ---
+name: recap
 description: Synthesize your Claude Code session history into a readable recap. Use for /recap, /recap today, /recap yesterday, /recap week, or /recap YYYY-MM-DD.
 ---
 
